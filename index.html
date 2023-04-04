@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300&family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light shadow  mx-auto" dir="rtl">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">تهاني </a>
+            <div class="company text-center">
+                <a class="navbar-brand" href="#">
+                    <span><i class="fa-solid fa-rocket"></i></span>
+                    <br>
+                    <span>طور الشركات</span>
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 owl-carousel owl-theme">
+                    <li class="nav-item">
+                        <a class="nav-link p-3" aria-current="page" href="#">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-3" href="#">
+                            <i class="fa-solid fa-headphones"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-3" href="#">
+                            <i class="fa-solid fa-users-rectangle"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-3" href="#">
+                            <i class="fa-solid fa-ribbon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-3" href="#">
+                            <i class="fa-solid fa-user-group"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-3" href="#">
+                            <i class="fa-solid fa-chart-simple"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-3" href="#">
+                            <i class="fa-solid fa-tag"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-3" href="#">
+                            <i class="fa-regular fa-user"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-3" href="#">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-3" href="#">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Section For All Cards Products-->
+    <section class="mt-5">
+        <h4 class="text-center">المنتجات</h4>
+        <div class="container">
+            <div class="mb-3 d-flex justify-content-between btns">
+                <button class="btn bg-danger py-3 px-2 text-light display" id="selected">حذف المنتجات المحدده</button>
+                <button class="btn bg-success py-2 px-1 text-light"><i class="fa-solid fa-plus"></i></button>
+            </div>
+            <!--Div For Product It Self-->
+            <div class="card_product d-flex justify-content-around align-items-center shadow">
+                <input type="checkbox" name="check" id="check" class="check">
+                <!--Aother Two Divs For Details Card Product-->
+                <div dir="rtl">
+                    <form  disabled>
+                        <div>
+                            <label for="price">السعر</label>
+                            <input type="number" id="price" name="price" required class="s">
+                        </div>
+                        <div>
+                            <label for="much">الكميه</label>
+                            <input type="text" id="much" name="much" required class="s">
+                        </div>
+                        <div>
+                            <label for="discount">نوع التخفيض</label>
+                            <select name="discount_range" id="discount_range" class="s">
+                                <option value="precent">نسبه مئويه</option>
+                                <option value="cash" selected>قيمه نقديه</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="discount_value">قيمة التخفيض</label>
+                            <input type="text" id="discount_value" name="discount_value" required class="s">
+                        </div>
+                        <div>
+                            <label for="detail_name_eng">اسم المنتج  بالانجليزيه</label>
+                            <input type="text" id="detail_name_eng" name="detail_name_eng" required class="s">
+                        </div>
+                    </form>
+                </div>
+                <div dir="rtl">
+                    <form disabled>
+                        <div>
+                            <label for="code">كود المنتج </label>
+                            <input type="text" id="code" name="code" required  class="s">
+                        </div>
+                        <div>
+                            <label for="name">اسم المنتج </label>
+                            <input type="text" id="name" name="name" required class="s">
+                        </div>
+                        <div>
+                            <label for="category">قسم المنتج </label>
+                            <select name="categoryChoice" id="categoryChoice" class="s">
+                                <option value="SodaDrink">مشروبات غازيه</option>
+                                <option value="choice_category" selected>اخار القسم</option>
+                                <option value="ColdDrink">مشروبات بارده</option>
+                                <option value="coffe">القهوة الساخنه</option>
+                                <option value="dessert">الحلي</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="detail">تفاصيل المنتج </label>
+                            <input type="text" id="detail" name="detail" required class="s">
+                        </div>
+                        <div>
+                            <label for="detailEng">تفاصيل المنتج  بالانجليزيه</label>
+                            <input type="text" id="detailEng" name="detailEng" required class="s">
+                        </div>
+                    </form>
+
+                </div>
+                <!--div For Image of products-->
+                <div class="image_product">
+                    <img src="imgs/food-photography-chicken.jpg" alt="Eating">
+                </div>
+            </div>
+            <div class="card_product d-flex justify-content-around align-items-center shadow">
+                <input type="checkbox" name="check" id="check" class="check">
+                <!--Aother Two Divs For Details Card Product-->
+                <div dir="rtl">
+                    <form  disabled>
+                        <div>
+                            <label for="price">السعر</label>
+                            <input type="number" id="price" name="price" required class="s">
+                        </div>
+                        <div>
+                            <label for="much">الكميه</label>
+                            <input type="text" id="much" name="much" required class="s">
+                        </div>
+                        <div>
+                            <label for="discount">نوع التخفيض</label>
+                            <select name="discount_range" id="discount_range" class="s">
+                                <option value="precent">نسبه مئويه</option>
+                                <option value="cash" selected>قيمه نقديه</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="discount_value">قيمة التخفيض</label>
+                            <input type="text" id="discount_value" name="discount_value" required class="s">
+                        </div>
+                        <div>
+                            <label for="detail_name_eng">اسم المنتج  بالانجليزيه</label>
+                            <input type="text" id="detail_name_eng" name="detail_name_eng" required class="s">
+                        </div>
+                    </form>
+                </div>
+                <div dir="rtl">
+                    <form disabled>
+                        <div>
+                            <label for="code">كود المنتج </label>
+                            <input type="text" id="code" name="code" required  class="s">
+                        </div>
+                        <div>
+                            <label for="name">اسم المنتج </label>
+                            <input type="text" id="name" name="name" required class="s">
+                        </div>
+                        <div>
+                            <label for="category">قسم المنتج </label>
+                            <select name="categoryChoice" id="categoryChoice" class="s">
+                                <option value="SodaDrink">مشروبات غازيه</option>
+                                <option value="choice_category" selected>اخار القسم</option>
+                                <option value="ColdDrink">مشروبات بارده</option>
+                                <option value="coffe">القهوة الساخنه</option>
+                                <option value="dessert">الحلي</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="detail">تفاصيل المنتج </label>
+                            <input type="text" id="detail" name="detail" required class="s">
+                        </div>
+                        <div>
+                            <label for="detailEng">تفاصيل المنتج  بالانجليزيه</label>
+                            <input type="text" id="detailEng" name="detailEng" required class="s">
+                        </div>
+                    </form>
+
+                </div>
+                <!--div For Image of products-->
+                <div class="image_product">
+                    <img src="imgs/download (1).jpg" alt="Eating">
+                </div>
+            </div>
+            <div class="card_product d-flex justify-content-around align-items-center shadow">
+                <input type="checkbox" name="check" id="check" class="check">
+                <!--Aother Two Divs For Details Card Product-->
+                <div dir="rtl">
+                    <form  disabled>
+                        <div>
+                            <label for="price">السعر</label>
+                            <input type="number" id="price" name="price" required class="s">
+                        </div>
+                        <div>
+                            <label for="much">الكميه</label>
+                            <input type="text" id="much" name="much" required class="s">
+                        </div>
+                        <div>
+                            <label for="discount">نوع التخفيض</label>
+                            <select name="discount_range" id="discount_range" class="s">
+                                <option value="precent">نسبه مئويه</option>
+                                <option value="cash" selected>قيمه نقديه</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="discount_value">قيمة التخفيض</label>
+                            <input type="text" id="discount_value" name="discount_value" required class="s">
+                        </div>
+                        <div>
+                            <label for="detail_name_eng">اسم المنتج  بالانجليزيه</label>
+                            <input type="text" id="detail_name_eng" name="detail_name_eng" required class="s">
+                        </div>
+                    </form>
+                </div>
+                <div dir="rtl">
+                    <form disabled>
+                        <div>
+                            <label for="code">كود المنتج </label>
+                            <input type="text" id="code" name="code" required  class="s">
+                        </div>
+                        <div>
+                            <label for="name">اسم المنتج </label>
+                            <input type="text" id="name" name="name" required class="s">
+                        </div>
+                        <div>
+                            <label for="category">قسم المنتج </label>
+                            <select name="categoryChoice" id="categoryChoice" class="s">
+                                <option value="SodaDrink">مشروبات غازيه</option>
+                                <option value="choice_category" selected>اخار القسم</option>
+                                <option value="ColdDrink">مشروبات بارده</option>
+                                <option value="coffe">القهوة الساخنه</option>
+                                <option value="dessert">الحلي</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="detail">تفاصيل المنتج </label>
+                            <input type="text" id="detail" name="detail" required class="s">
+                        </div>
+                        <div>
+                            <label for="detailEng">تفاصيل المنتج  بالانجليزيه</label>
+                            <input type="text" id="detailEng" name="detailEng" required class="s">
+                        </div>
+                    </form>
+
+                </div>
+                <!--div For Image of products-->
+                <div class="image_product">
+                    <img src="imgs/download.jpg" alt="Eating">
+                </div>
+            </div>
+            <div class="card_product d-flex justify-content-around align-items-center shadow">
+                <input type="checkbox" name="check" id="check" class="check">
+                <!--Aother Two Divs For Details Card Product-->
+                <div dir="rtl">
+                    <form  disabled>
+                        <div>
+                            <label for="price">السعر</label>
+                            <input type="number" id="price" name="price" required class="s">
+                        </div>
+                        <div>
+                            <label for="much">الكميه</label>
+                            <input type="text" id="much" name="much" required class="s">
+                        </div>
+                        <div>
+                            <label for="discount">نوع التخفيض</label>
+                            <select name="discount_range" id="discount_range" class="s">
+                                <option value="precent">نسبه مئويه</option>
+                                <option value="cash" selected>قيمه نقديه</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="discount_value">قيمة التخفيض</label>
+                            <input type="text" id="discount_value" name="discount_value" required class="s">
+                        </div>
+                        <div>
+                            <label for="detail_name_eng">اسم المنتج  بالانجليزيه</label>
+                            <input type="text" id="detail_name_eng" name="detail_name_eng" required class="s">
+                        </div>
+                    </form>
+                </div>
+                <div dir="rtl">
+                    <form disabled>
+                        <div>
+                            <label for="code">كود المنتج </label>
+                            <input type="text" id="code" name="code" required  class="s">
+                        </div>
+                        <div>
+                            <label for="name">اسم المنتج </label>
+                            <input type="text" id="name" name="name" required class="s">
+                        </div>
+                        <div>
+                            <label for="category">قسم المنتج </label>
+                            <select name="categoryChoice" id="categoryChoice" class="s">
+                                <option value="SodaDrink">مشروبات غازيه</option>
+                                <option value="choice_category" selected>اخار القسم</option>
+                                <option value="ColdDrink">مشروبات بارده</option>
+                                <option value="coffe">القهوة الساخنه</option>
+                                <option value="dessert">الحلي</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="detail">تفاصيل المنتج </label>
+                            <input type="text" id="detail" name="detail" required class="s">
+                        </div>
+                        <div>
+                            <label for="detailEng">تفاصيل المنتج  بالانجليزيه</label>
+                            <input type="text" id="detailEng" name="detailEng" required class="s">
+                        </div>
+                    </form>
+
+                </div>
+                <!--div For Image of products-->
+                <div class="image_product">
+                    <img src="imgs/images.jpg" alt="Eating">
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--Section For All Cards Products-->
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
