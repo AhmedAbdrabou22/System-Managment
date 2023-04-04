@@ -184,4 +184,19 @@ option {
     .owl-dots {
         display: none;
     }
+    .card_product{
+        flex-direction: column;
+    }
+    .card_product div{
+        margin-bottom:10px;
+    }
+    #check{
+        position: absolute;
+        top:1%;
+        right:5%;
+        width: 25px;
+        height: 25px;
+        border: 2px solid #000;
+        background-color: #FFF;
+    }
 }
