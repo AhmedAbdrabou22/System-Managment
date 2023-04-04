@@ -200,3 +200,18 @@ option {
         background-color: #FFF;
     }
 }
+
+
+#trustForm {
+	background-color: #fff;
+	border: 2px dashed #ccc;
+	border-radius: 20px;
+	width: 480px;
+	font-family: sans-serif;
+	margin: 20px auto;
+	padding: 20px;
+}
+
+#fileElem {
+	display: none;
+}
