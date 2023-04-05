@@ -95,8 +95,8 @@ add_product.addEventListener("click", () => {
     <form>
     <div>
         <div class="img-preview"></div>
-        <input type="file" id="choose-file" class="choose-file" name="choose-file" accept="image/*" />
-        <label for="choose-file">Choose File</label>
+        <input type="file" id="choose-file${new Date()}" class="choose-file" name="choose-file" accept="image/*" />
+        <label for="choose-file${new Date()}">Choose File</label>
         </div>
     </form>
     </div>
