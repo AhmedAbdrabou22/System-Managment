@@ -82,11 +82,12 @@ nav {
     -o-border-radius: 20px;
 }
 
-.btns button:last-child{
-    width:120px;
-    font-size:25px;
+.btns button:last-child {
+    width: 120px;
+    font-size: 25px;
 }
-.btns button:first-child{
+
+.btns button:first-child {
     display: none;
 }
 
@@ -108,7 +109,10 @@ form div label {
     font-weight: 600;
 }
 
-input[type="text"], input[type="number"], select, option {
+input[type="text"],
+input[type="number"],
+select,
+option {
     padding: 10px;
     border: 1px solid #D6E0EF;
     outline: none;
@@ -131,10 +135,10 @@ option {
 
 
 
-#check{
+#check {
     position: absolute;
-    top:2%;
-    right:5%;
+    top: 2%;
+    right: 5%;
     width: 30px;
     height: 30px;
     border: 2px solid #000;
@@ -184,16 +188,19 @@ option {
     .owl-dots {
         display: none;
     }
-    .card_product{
+
+    .card_product {
         flex-direction: column;
     }
-    .card_product div{
-        margin-bottom:10px;
+
+    .card_product div {
+        margin-bottom: 10px;
     }
-    #check{
+
+    #check {
         position: absolute;
-        top:1%;
-        right:5%;
+        top: 1%;
+        right: 5%;
         width: 25px;
         height: 25px;
         border: 2px solid #000;
@@ -202,16 +209,46 @@ option {
 }
 
 
-#trustForm {
-	background-color: #fff;
-	border: 2px dashed #ccc;
-	border-radius: 20px;
-	width: 480px;
-	font-family: sans-serif;
-	margin: 20px auto;
-	padding: 20px;
+#img-preview {
+    display: none;
+    width: 250px;
+    margin-bottom: 20px;
 }
 
-#fileElem {
-	display: none;
+#img-preview img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+[type="file"] {
+    height: 0;
+    width:0;
+    overflow: hidden;
+    margin: auto;
+    text-align: center;
+}
+
+[type="file"]+label {
+    font-family: sans-serif;
+    background: #416fbb;
+    padding: 10px 30px;
+    border: 2px solid #416fbb;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+    width:250px;
+}
+
+p {
+    position: fixed;
+    bottom: 0;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+p a {
+    color: #000;
 }
