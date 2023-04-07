@@ -22,8 +22,7 @@ $(".owl-carousel").owlCarousel({
 
 // console.log('hello');
 
-let inputs = document.querySelectorAll(".s");
-let card_product = document.querySelector(".card_product");
+
 let add_product = document.getElementById("add_product");
 let parent_card_product = document.querySelector(".parent_card_product");
 let too = document.querySelector(".too");
@@ -32,6 +31,9 @@ add_product.addEventListener("click", () => {
     too.innerHTML += `<div class="card_product d-flex justify-content-around align-items-center shadow">
     <input type="checkbox" name="check" id="check" class="check">
     <!--Aother Two Divs For Details Card Product-->
+    <div class="open_eye">
+        <i class="fa-solid fa-eye" onclick="display_content(this)"></i>
+    </div>
     <div dir="rtl">
         <form  disabled>
             <div>
@@ -95,13 +97,14 @@ add_product.addEventListener("click", () => {
     <form>
     <div>
         <div class="img-preview"></div>
-        <input type="file" id="choose-file${new Date()}" class="choose-file" name="choose-file" accept="image/*" />
+        <input type="file" id="choose-file${new Date()}" class="choose-file s" name="choose-file" accept="image/*" />
         <label for="choose-file${new Date()}">Choose File</label>
         </div>
     </form>
     </div>
     </div>`
     const chooseFile = document.querySelectorAll(".choose-file");
+    console.log(new Date());
     console.log(chooseFile);
     // const imgPreview = document.querySelectorAll(".img-preview");
     if(chooseFile.length >=1){
@@ -151,7 +154,15 @@ add_product.addEventListener("click", () => {
 
 
 
-
+function display_content(element){
+    console.log(element.parentElement.parentElement);
+    element.parentElement.parentElement.style.backgroundColor ="#D6E0EF"
+    // let inputs = document.querySelectorAll(".s");
+    // let card_product = document.querySelector(".card_product");
+    // inputs.forEach((input)=>{
+    //     input.setAttribute('disabled',true)
+    // })
+}
 
 // const chooseFile = document.getElementById("choose-file");
 // const imgPreview = document.getElementById("img-preview");
