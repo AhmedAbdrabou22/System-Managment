@@ -32,10 +32,11 @@ add_product.addEventListener("click", () => {
     <input type="checkbox" name="check" id="check" class="check">
     <!--Aother Two Divs For Details Card Product-->
     <div class="open_eye">
-        <i class="fa-solid fa-eye" onclick="display_content(this)"></i>
+        <i class="fa-regular fa-eye" onclick="display_content(this)"></i>
+        <i class="fa-solid fa-eye-slash" onclick="display_content_another(this)"></i>
     </div>
     <div dir="rtl">
-        <form  disabled>
+        <form >
             <div>
                 <label for="price">السعر</label>
                 <input type="number" id="price" name="price" required class="s">
@@ -62,7 +63,7 @@ add_product.addEventListener("click", () => {
         </form>
     </div>
     <div dir="rtl">
-        <form disabled>
+        <form>
             <div>
                 <label for="code">كود المنتج </label>
                 <input type="text" id="code" name="code" required  class="s">
@@ -156,29 +157,29 @@ add_product.addEventListener("click", () => {
 
 function display_content(element){
     console.log(element.parentElement.parentElement);
-    element.parentElement.parentElement.style.backgroundColor ="#D6E0EF"
-    // let inputs = document.querySelectorAll(".s");
-    // let card_product = document.querySelector(".card_product");
-    // inputs.forEach((input)=>{
-    //     input.setAttribute('disabled',true)
-    // })
+    element.parentElement.parentElement.style.backgroundColor ="rgb(210 214 221)";
+    for(var i=0; i<element.parentElement.nextElementSibling.firstElementChild.length;i++){
+        element.parentElement.nextElementSibling.firstElementChild[i].setAttribute('disabled',true)
+    }
+    for(var i=0; i<element.parentElement.nextElementSibling.nextElementSibling.firstElementChild.length;i++){
+        element.parentElement.nextElementSibling.nextElementSibling.firstElementChild[i].setAttribute('disabled',true)
+    }
+    // let close_eye = document.querySelector('.fa-eye-slash')
+    element.style.display = 'none'
+    element.nextElementSibling.style.display = 'block'
 }
 
-// const chooseFile = document.getElementById("choose-file");
-// const imgPreview = document.getElementById("img-preview");
+function display_content_another(elementAnother){
+    elementAnother.parentElement.parentElement.style.backgroundColor ="#fff";
+    for(var i=0; i<elementAnother.parentElement.nextElementSibling.firstElementChild.length;i++){
+        elementAnother.parentElement.nextElementSibling.firstElementChild[i].setAttribute('disabled',false)
+    }
+    for(var i=0; i<elementAnother.parentElement.nextElementSibling.nextElementSibling.firstElementChild.length;i++){
+        elementAnother.parentElement.nextElementSibling.nextElementSibling.firstElementChild[i].setAttribute('disabled',false)
+    }
+    // let open_eye = document.querySelector('.fa-eye')
+    elementAnother.style.display = 'none'
+    elementAnother.previousElementSibling.style.display = 'block'
+}
 
-// chooseFile.addEventListener("change", function () {
-//   getImgData();
-// });
 
-// function getImgData() {
-//   const files = chooseFile.files[0];
-//   if (files) {
-//     const fileReader = new FileReader();
-//     fileReader.readAsDataURL(files);
-//     fileReader.addEventListener("load", function () {
-//       imgPreview.style.display = "block";
-//       imgPreview.innerHTML = '<img src="' + this.result + '" />';
-//     });
-//   }
-// }
