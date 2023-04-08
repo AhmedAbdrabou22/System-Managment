@@ -129,6 +129,7 @@ add_product.addEventListener("click", () => {
 
     let check = document.querySelectorAll(".check");
     let selected = document.getElementById("selected");
+    let yes = document.getElementById("yes");
     check.forEach((checkEle) => {
         checkEle.addEventListener("click", () => {
             checkEle.parentElement.classList.toggle("a");
@@ -138,7 +139,7 @@ add_product.addEventListener("click", () => {
             } else {
                 selected.style.display = "none";
             }
-            selected.addEventListener("click", () => {
+            yes.addEventListener("click", () => {
                 checkedElm.forEach((ele) => {
                     if (ele.classList.contains("a")) {
                         ele.remove();
