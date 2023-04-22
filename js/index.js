@@ -174,10 +174,10 @@ function display_content(element) {
 function display_content_another(elementAnother) {
     elementAnother.parentElement.parentElement.style.backgroundColor = "#fff";
     for (var i = 0; i < elementAnother.parentElement.nextElementSibling.firstElementChild.length; i++) {
-        elementAnother.parentElement.nextElementSibling.firstElementChild[i].setAttribute('disabled', false)
+        elementAnother.parentElement.nextElementSibling.firstElementChild[i].removeAttribute('disabled')
     }
     for (var i = 0; i < elementAnother.parentElement.nextElementSibling.nextElementSibling.firstElementChild.length; i++) {
-        elementAnother.parentElement.nextElementSibling.nextElementSibling.firstElementChild[i].setAttribute('disabled', false)
+        elementAnother.parentElement.nextElementSibling.nextElementSibling.firstElementChild[i].removeAttribute('disabled')
         console.log(elementAnother.parentElement.nextElementSibling.nextElementSibling.firstElementChild[i]);
     }
     // let open_eye = document.querySelector('.fa-eye')
