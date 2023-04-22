@@ -34,6 +34,7 @@ add_product.addEventListener("click", () => {
     <div class="open_eye">
         <i class="fa-regular fa-eye" onclick="display_content(this)"></i>
         <i class="fa-solid fa-eye-slash" onclick="display_content_another(this)"></i>
+        <i class="fa-solid fa-xmark remover" onclick="Remover(this)"></i>
     </div>
     <div dir="rtl">
         <form >
@@ -100,7 +101,7 @@ add_product.addEventListener("click", () => {
         <div class="img-preview"></div>
         <input type="file" id="choose-file${new Date()}" class="choose-file s" name="choose-file" accept="image/*" />
         <label for="choose-file${new Date()}">Choose File</label>
-        </div>
+    </div>
     </form>
     </div>
     </div>`
@@ -108,8 +109,8 @@ add_product.addEventListener("click", () => {
     console.log(new Date());
     console.log(chooseFile);
     // const imgPreview = document.querySelectorAll(".img-preview");
-    if(chooseFile.length >=1){
-        chooseFile.forEach((choosen)=>{
+    if (chooseFile.length >= 1) {
+        chooseFile.forEach((choosen) => {
             choosen.addEventListener("change", function () {
                 console.log(choosen);
                 const files = choosen.files[0];
@@ -156,27 +157,28 @@ add_product.addEventListener("click", () => {
 
 
 
-function display_content(element){
+function display_content(element) {
     console.log(element.parentElement.parentElement);
-    element.parentElement.parentElement.style.backgroundColor ="rgb(210 214 221)";
-    for(var i=0; i<element.parentElement.nextElementSibling.firstElementChild.length;i++){
-        element.parentElement.nextElementSibling.firstElementChild[i].setAttribute('disabled',true)
+    element.parentElement.parentElement.style.backgroundColor = "rgb(210 214 221)";
+    for (var i = 0; i < element.parentElement.nextElementSibling.firstElementChild.length; i++) {
+        element.parentElement.nextElementSibling.firstElementChild[i].setAttribute('disabled', true)
     }
-    for(var i=0; i<element.parentElement.nextElementSibling.nextElementSibling.firstElementChild.length;i++){
-        element.parentElement.nextElementSibling.nextElementSibling.firstElementChild[i].setAttribute('disabled',true)
+    for (var i = 0; i < element.parentElement.nextElementSibling.nextElementSibling.firstElementChild.length; i++) {
+        element.parentElement.nextElementSibling.nextElementSibling.firstElementChild[i].setAttribute('disabled', true)
     }
     // let close_eye = document.querySelector('.fa-eye-slash')
     element.style.display = 'none'
     element.nextElementSibling.style.display = 'block'
 }
 
-function display_content_another(elementAnother){
-    elementAnother.parentElement.parentElement.style.backgroundColor ="#fff";
-    for(var i=0; i<elementAnother.parentElement.nextElementSibling.firstElementChild.length;i++){
-        elementAnother.parentElement.nextElementSibling.firstElementChild[i].setAttribute('disabled',false)
+function display_content_another(elementAnother) {
+    elementAnother.parentElement.parentElement.style.backgroundColor = "#fff";
+    for (var i = 0; i < elementAnother.parentElement.nextElementSibling.firstElementChild.length; i++) {
+        elementAnother.parentElement.nextElementSibling.firstElementChild[i].setAttribute('disabled', false)
     }
-    for(var i=0; i<elementAnother.parentElement.nextElementSibling.nextElementSibling.firstElementChild.length;i++){
-        elementAnother.parentElement.nextElementSibling.nextElementSibling.firstElementChild[i].setAttribute('disabled',false)
+    for (var i = 0; i < elementAnother.parentElement.nextElementSibling.nextElementSibling.firstElementChild.length; i++) {
+        elementAnother.parentElement.nextElementSibling.nextElementSibling.firstElementChild[i].setAttribute('disabled', false)
+        console.log(elementAnother.parentElement.nextElementSibling.nextElementSibling.firstElementChild[i]);
     }
     // let open_eye = document.querySelector('.fa-eye')
     elementAnother.style.display = 'none'
@@ -184,3 +186,7 @@ function display_content_another(elementAnother){
 }
 
 
+function Remover(e){
+    // console.log(e.parentElement.parentElement);
+    e.parentElement.parentElement.remove()
+}
