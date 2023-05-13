@@ -32,6 +32,8 @@ add_product.addEventListener("click", () => {
     <input type="checkbox" name="check" id="check" class="check">
     <!--Aother Two Divs For Details Card Product-->
     <div class="open_eye">
+    <i class="fa-solid fa-check checked bg-success" data-bs-toggle="modal" data-bs-target="#exampleModal2"></i>
+    <br>
         <i class="fa-regular fa-eye" onclick="display_content(this)"></i>
         <i class="fa-solid fa-eye-slash" onclick="display_content_another(this)"></i>
         <i class="fa-solid fa-xmark remover" onclick="Remover(this)"></i>
@@ -131,6 +133,7 @@ add_product.addEventListener("click", () => {
     let check = document.querySelectorAll(".check");
     let selected = document.getElementById("selected");
     let yes = document.getElementById("yes");
+    let modal = document.querySelector('.modal')
     check.forEach((checkEle) => {
         checkEle.addEventListener("click", () => {
             checkEle.parentElement.classList.toggle("a");
@@ -186,7 +189,7 @@ function display_content_another(elementAnother) {
 }
 
 
-function Remover(e){
+function Remover(e) {
     // console.log(e.parentElement.parentElement);
     e.parentElement.parentElement.remove()
 }

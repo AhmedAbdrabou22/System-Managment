@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body{
+    font-family: 'Tajawal', sans-serif  !important;
+}
 nav {
     background-color: #416fbb;
     width: 85%;
@@ -152,7 +154,17 @@ option {
     text-align: center !important;
 }
 
-
+.checked{
+    /* background-color: green; */
+    padding:4px 10px;
+    color: white;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-left:-8px
+}
 
 
 
@@ -284,7 +296,7 @@ p a {
 }
 .remover{
     position: absolute;
-    top:5%;
+    top:1%;
     left:2%;
     background-color: red;
     color:white;
@@ -296,6 +308,7 @@ p a {
     -o-border-radius: 10px;
     visibility:hidden;
     cursor: pointer;
+    font-size: 20px;
 }
 .card_product:hover .remover{
     visibility: visible;
